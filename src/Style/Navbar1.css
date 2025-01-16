@@ -1,0 +1,44 @@
+body {
+  background-color: 5px solid #8e44ad;
+
+
+  color: white;
+}
+
+.navbar {
+  padding: 16px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  border-bottom: 2px solid purple;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    margin-right: auto;
+  }
+}
+
+.navbar-nav .nav-item {
+  margin: 0 40px; /* Add horizontal spacing between items */
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.2em; /* Increase the font size */
+  padding: 10px 15px; /* Add vertical and horizontal padding */
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Add a hover effect */
+  border-radius: 5px; /* Rounded corners for hover effect */
+}
+
+

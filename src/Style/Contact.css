@@ -1,0 +1,54 @@
+.container {
+    max-width: 1200px; /* Set a max width for larger screens */
+    margin: auto; /* Center the container */
+    margin-top: 40px;
+}
+
+h2 {
+    color: #8e44ad; /* Use a nice color for headings */
+}
+
+.social-icons {
+    display: inline-block; /* Ensure they are treated as inline */
+}
+
+.icon-colour {
+    color: #000; /* Default icon color */
+    transition: color 0.3s; /* Add a transition for hover effects */
+}
+
+.icon-colour:hover {
+    color: #ff4081; /* Change color on hover */
+}
+
+input[type="text"], textarea {
+    width: 100%; /* Make inputs full width */
+    padding: 10px; /* Add padding */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 15px; /* Space between inputs */
+    font-size: 1em; /* Font size */
+}
+
+input[type="submit"] {
+    background-color: #8e44ad; /* Button color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 10px 15px; /* Padding */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 1em; /* Font size */
+    transition: background-color 0.3s; /* Transition */
+}
+
+input[type="submit"]:hover {
+    background-color: #732d8a; /* Darker purple on hover */
+}
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Stack columns on smaller screens */
+    }
+}
+
+

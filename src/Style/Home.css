@@ -1,0 +1,55 @@
+.box {
+  background-color: rgba(11, 26, 51, 0.8); /* Semi-transparent background */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Padding inside the box */
+  box-shadow: 0 4px 15px rgba(255, 255, 15, 0.905); /* Subtle shadow */
+  text-align: center; /* Center the text inside the box */
+  margin-top: 20px; /* Space above the box */
+  width: 100%; /* Make width 100% for responsiveness */
+  max-width: 550px; /* Maximum width */
+}
+
+.bounce-in-left {
+  animation: bounceInLeft 5s infinite;
+}
+
+@keyframes bounceInLeft {
+  0% {
+      opacity: 0;
+      transform: translateX(-100%);
+  }
+  60% {
+      opacity: 1;
+      transform: translateX(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+.home-about-social {
+  margin-top: 50px; /* Add some space above */
+}
+
+.home-about-social-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.social-icons {
+  display: inline-block; /* Ensure they are treated as inline */
+}
+
+.icon-colour {
+  color: #000; /* Change to your desired color */
+  transition: color 0.3s; /* Add a transition for hover effects */
+}
+
+.icon-colour:hover {
+  color: #ff4081; /* Change color on hover */
+}
+
+.home-about-description {
+  margin-top: 20px; /* Adjust margin for smaller screens */
+}

@@ -1,0 +1,45 @@
+.about-activity {
+    font-size: 1.1em; /* Adjust font size for better readability */
+    margin-bottom: 10px; /* Space between activities */
+  }
+  
+  .project-heading {
+    font-size: 2em; /* Heading size */
+    margin-bottom: 20px; /* Space below headings */
+    text-align: center; /* Center the headings */
+  }
+  
+  .purple {
+    color: #8e44ad; /* Your purple color */
+  }
+  
+  .img-fluid {
+    border-radius: 10px; /* Rounded corners for the image */
+  }
+  
+  blockquote {
+    border-left: 5px solid #8e44ad; /* Left border color */
+    padding: 20px; /* Padding inside blockquote */
+    margin: 20px 0; /* Margin around blockquote */
+  }
+  
+  .tech-icons {
+    font-size: 100px; /* Increase icon size */
+    text-align: center; /* Center the icons */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for scaling and color */
+    background: rgba(142, 68, 173, 0.1); /* Light purple background */
+    border: 2px solid #8e44ad; /* Border around the icon */
+    border-radius: 15px; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+    margin: 10px; /* Space between icons */
+    display: flex; /* Flexbox to center the icon */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+  }
+  
+  .tech-icons:hover {
+    transform: scale(1.1); /* Scale up on hover */
+    color: #8e44ad; /* Change color on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  }
+  

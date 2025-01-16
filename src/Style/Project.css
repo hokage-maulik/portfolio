@@ -1,0 +1,47 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    justify-content: center; /* Center the cards */
+    gap: 20px; /* Space between cards */
+    margin-top: 20px; /* Space above the cards */
+    
+}
+
+.card {
+    width: 375px; /* Card width */
+    height: 500px; /* Fixed height for consistency */
+    border-radius: 20px; /* Rounded corners */
+    overflow: hidden; /* Prevent overflow of the image */
+    transition: none; /* No transition effects */
+    background-color: rgba(142, 68, 173, 0.1);
+}
+
+.card-img-top {
+    height: 200px; /* Fixed height for image */
+    object-fit: cover; /* Cover the entire area */
+}
+
+.card-body {
+    padding: 20px; /* Padding inside the card */
+}
+
+.card-title {
+    font-weight: bold; /* Make the title bold */
+    color: white; /* White color for the title */
+}
+
+.card-text {
+    font-size:14px; /* Font size for description */
+    color:white; /* White color for better readability */
+    height: 100px; /* Fixed height for text to keep cards uniform */
+    overflow: hidden; /* Hide overflow */
+}
+
+.btn-primary {
+    background-color: #8e44ad; /* Purple button color */
+    border: none; /* Remove border */
+}
+
+.btn-primary:hover {
+    background-color: #732d8a; /* Darker purple on hover */
+}
