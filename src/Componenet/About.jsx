@@ -18,7 +18,7 @@ export default function About() {
                 Hi Everyone, I am <span className="purple">Maulik Vaghela</span>
                 from <span className="purple"> Ahemdabad, India.</span>
                 <br />
-                I am currently employed as a Full-Stack developer at Juspay.
+                {/* I am currently employed as a Full-Stack developer at Juspay. */}
                 <br />
                 I have completed Integrated BSc in Chemistry at Gujarat University.
                 <br /><br />

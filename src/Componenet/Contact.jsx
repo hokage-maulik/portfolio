@@ -62,7 +62,7 @@
 
 
 import React from 'react';
-import { AiFillGithub, AiFillInstagram } from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { contactDetails } from '../Details';
 import '../Style/Contact.css';
@@ -106,11 +106,11 @@ export default function Contact() {
                                     <FaLinkedinIn size={40} />
                                 </a>
                             </li>
-                            <li className="social-icons mx-3">
+                            {/* <li className="social-icons mx-3">
                                 <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="icon-colour home-social-icons text-white">
                                     <AiFillInstagram size={40} />
                                 </a>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </div>
