@@ -42,7 +42,7 @@ export default function Navbar() {
               </Link>
             </li>
             <li className="nav-item" style={{display:"flex",alignItems:"center"}}>
-              <a lassName="nav-link"  href='/Maulik.pdf' style={{textDecoration:"none",color:"#ffffff8c",fontWeight:"bold",fontSize:'1.2rem',padding:"10px 15px"}}>
+              <a lassName="nav-link"  href='/Maulil Final Resume.pdf' style={{textDecoration:"none",color:"#ffffff8c",fontWeight:"bold",fontSize:'1.2rem',padding:"10px 15px"}}>
                 Resume
               </a>
             </li>
