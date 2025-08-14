@@ -62,7 +62,7 @@
 
 
 import React from 'react';
-import { AiFillGithub } from "react-icons/ai";
+// import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { contactDetails } from '../Details';
 import '../Style/Contact.css';
@@ -96,11 +96,11 @@ export default function Contact() {
                         </div>
 
                         <ul className="home-about-social-links text-center">
-                            <li className="social-icons mx-3">
+                            {/* <li className="social-icons mx-3">
                                 <a href="https://github.com/hokage-maulik" target="_blank" rel="noreferrer" className="icon-colour home-social-icons text-white">
                                     <AiFillGithub size={40} />
                                 </a>
-                            </li>
+                            </li> */}
                             <li className="social-icons mx-3">
                                 <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank" rel="noreferrer" className="icon-colour home-social-icons text-white">
                                     <FaLinkedinIn size={40} />

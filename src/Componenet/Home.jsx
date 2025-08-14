@@ -1,6 +1,6 @@
 import React from 'react';
 import "../Style/Home.css";
-import { AiFillGithub} from "react-icons/ai";
+// import { AiFillGithub} from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 // import Particle from './Particle';
 import "../Style/Particle.css"
@@ -74,7 +74,8 @@ export default function Home() {
                 Feel free to <span className="purple">connect </span>with me
               </p>
               <ul className="home-about-social-links d-flex justify-content-center">
-                <li className="social-icons mx-3">
+                
+                {/* <li className="social-icons mx-3">
                   <a
                     href="https://github.com/hokage-maulik"
                     target="_blank"
@@ -82,8 +83,9 @@ export default function Home() {
                     className="icon-colour home-social-icons text-white"
                   >
                     <AiFillGithub size={40} /> {/* Increased size */}
-                  </a>
-                </li>
+                  {/* </a> */}
+                {/* </li> */} 
+
                 <li className="social-icons mx-3">
                   <a
                     href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit"
