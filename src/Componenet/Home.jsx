@@ -24,7 +24,7 @@ export default function Home() {
           </div>
           <div className="col-md-6">
             <img  style={{maxHeight:"500px",width:""}}
-              src="me.jpeg" 
+              src="Maulikimg.jpeg" 
               alt="Maulik"
               className="img-fluid float-end mt-2"
             />
