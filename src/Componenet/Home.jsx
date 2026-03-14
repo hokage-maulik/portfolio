@@ -45,16 +45,16 @@ export default function Home() {
                 <br />
                 <br />I am fluent in classics like
                 <i>
-                  <b className="purple"> C++, Javascript, and Node. </b>
+                  <b className="purple"> React, Javascript, and Node. </b>
                 </i>
                 <br />
                 <br />
-                My field of interest includes building new &nbsp;
+                My field of interest includes Works with new &nbsp;
                 <i>
-                  <b className="purple">Web Technologies and Products </b>
+                  <b className="purple">Web Technologies </b>
                 </i>
-                &nbsp; and also in areas related to{" "}
-                <b className="purple">Blockchain.</b>
+                {/* &nbsp; and also in areas related to{" "}
+                <b className="purple">Blockchain.</b> */}
                 <br />
                 <br />
                 Whenever possible, I also apply my passion for developing products
@@ -64,7 +64,7 @@ export default function Home() {
                 </i>
                 &nbsp; like
                 <i>
-                  <b className="purple"> React.js and Node.js</b>
+                  <b className="purple"> React.js and Next.js</b>
                 </i>
               </h5>
             </div>
