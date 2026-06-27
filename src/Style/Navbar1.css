@@ -1,44 +1,87 @@
 body {
-  background-color: 5px solid #8e44ad;
-
-
   color: white;
 }
 
 .navbar {
-  padding: 16px;
+  padding: 16px 0;
+  background: linear-gradient(90deg, rgba(20, 15, 35, 0.95) 0%, rgba(27, 20, 41, 0.95) 100%) !important;
+  box-shadow: 0 4px 15px rgba(142, 68, 173, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #8e44ad 0%, #ff6b9d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
 }
 
 .nav-link {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff !important;
+  position: relative;
+  transition: all 0.3s ease;
+  margin: 0 15px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #8e44ad 0%, #ff6b9d 100%);
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-  border-bottom: 2px solid purple;
+  color: #ff6b9d !important;
 }
 
+.nav-link:hover::after {
+  width: 100%;
+}
 
+.resume-link {
+  border: 2px solid #8e44ad;
+  border-radius: 25px;
+  padding: 8px 20px !important;
+  transition: all 0.3s ease;
+}
 
+.resume-link:hover {
+  background-color: #8e44ad;
+  box-shadow: 0 4px 15px rgba(142, 68, 173, 0.5);
+  transform: translateY(-2px);
+}
 
 @media (max-width: 768px) {
   .navbar-brand {
     margin-right: auto;
+    font-size: 1.5rem;
   }
-}
-
-.navbar-nav .nav-item {
-  margin: 0 40px; /* Add horizontal spacing between items */
-}
-
-.navbar-nav .nav-link {
-  font-size: 1.2em; /* Increase the font size */
-  padding: 10px 15px; /* Add vertical and horizontal padding */
-}
-
-.navbar-nav .nav-link:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* Add a hover effect */
-  border-radius: 5px; /* Rounded corners for hover effect */
+  
+  .nav-link {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+  .nav-link::after {
+    display: none;
+  }
+  
+  .navbar-nav .nav-item {
+    padding: 8px 0;
+  }
 }
 
 

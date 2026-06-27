@@ -1,20 +1,42 @@
 .about-activity {
-    font-size: 1.1em; /* Adjust font size for better readability */
-    margin-bottom: 10px; /* Space between activities */
+    font-size: 1.1em;
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+  }
+
+  .about-activity:hover {
+    color: #8e44ad;
+    margin-left: 10px;
   }
   
   .project-heading {
-    font-size: 2em; /* Heading size */
-    margin-bottom: 20px; /* Space below headings */
-    text-align: center; /* Center the headings */
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ffffff 0%, #8e44ad 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: slideDown 0.6s ease;
   }
   
   .purple {
-    color: #8e44ad; /* Your purple color */
+    color: #8e44ad;
+    font-weight: bold;
   }
   
   .img-fluid {
-    border-radius: 10px; /* Rounded corners for the image */
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(142, 68, 173, 0.3);
+    transition: all 0.4s ease;
+    animation: fadeInImage 0.8s ease;
+  }
+
+  .img-fluid:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow: 0 15px 50px rgba(142, 68, 173, 0.4);
   }
   
   blockquote {
@@ -38,8 +60,76 @@
   }
   
   .tech-icons:hover {
-    transform: scale(1.1); /* Scale up on hover */
-    color: #8e44ad; /* Change color on hover */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+    transform: scale(1.15) translateY(-10px);
+    color: #8e44ad;
+    box-shadow: 0 15px 40px rgba(142, 68, 173, 0.4);
+    background: rgba(142, 68, 173, 0.2);
+    border-color: #ff6b9d;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInImage {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .project-heading {
+      font-size: 1.6em;
+    }
+
+    .tech-icons {
+      font-size: 60px;
+      padding: 15px;
+      margin: 10px;
+      min-height: 120px;
+    }
+
+    blockquote {
+      padding: 15px;
+      margin: 20px 0;
+    }
+
+    .about-activity {
+      font-size: 1em;
+    }
   }
   

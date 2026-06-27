@@ -2,16 +2,11 @@ import React from 'react';
 import "../Style/Home.css";
 // import { AiFillGithub} from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-// import Particle from './Particle';
-import "../Style/Particle.css"
-import Particles from 'react-tsparticles';
 
 export default function Home() {
   return (
     <div>
       <div className="container mt-5">
-        <Particles/>
-        {/* <Particle/> */}
         
         <div className="row align-items-center">
           <div className="col-md-6">

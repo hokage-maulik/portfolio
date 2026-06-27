@@ -1,117 +1,140 @@
-// import React from 'react';
-// import {  AiFillGithub, AiFillInstagram } from "react-icons/ai";
-// import { FaLinkedinIn } from "react-icons/fa";
-// import { contactDetails } from '../Details';
-// import '../Style/Contact.css'
-
-// export default function Contact() {
-//     const { email, phone } = contactDetails;
-
-//     return (
-//         <div>
-//             <div className="container">
-//                 <div className="row">
-//                     <div className="col-md-6">
-//                         <h2 className='mt-5 text-center'>Contact Me</h2>
-//                         <p className='fs-5 mt-3 text-center'>Let's Work Together</p>
-//                         <p className="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore repellendus inventore architecto eos suscipit accusantium sapiente eius dignissimos? Laborum ducimus rerum perferendis sequi, est blanditiis!</p>
-
-//                         <div className="text-center">
-//                            <h3 className="text-center text-3xl md:text-4xl lg:text-6xl text-gradient font-semibold md:font-bold pt-5 md:pt-10 md:pb-6">
-//                            Email: <a href={`mailto:${email}`}>{email}</a>
-//                             </h3>
-//                             <span className="text-center text-content text-xl font-light block">or</span>
-//                            <h3 className="text-center text-3xl md:text-4xl lg:text-6xl text-gradient font-semibold md:font-bold pt-2 md:py-6">
-//                            Contact: <a href={`tel:${phone}`}>{phone}</a>
-//                             </h3>
-//                         </div>
-
-//                         <ul className="home-about-social-links text-center">
-//                             <li className="social-icons mx-3">
-//                                 <a href="https://github.com/hokage-maulik" target="_blank" rel="noreferrer" className="icon-colour home-social-icons text-white">
-//                                     <AiFillGithub size={40} />
-//                                 </a>
-//                             </li>
-//                             <li className="social-icons mx-3">
-//                                 <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank" rel="noreferrer" className="icon-colour home-social-icons text-white">
-//                                     <FaLinkedinIn size={40} />
-//                                 </a>
-//                             </li>
-//                             <li className="social-icons mx-3">
-//                                 <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="icon-colour home-social-icons text-white">
-//                                     <AiFillInstagram size={40} />
-//                                 </a>
-//                             </li>
-//                         </ul>
-//                     </div>
-
-//                     {/* <div className="col-md-6">
-//                         <form>
-//                             <input type="text" placeholder='Enter your Name' required />
-//                             <input type="email" placeholder='Enter your Email' required />
-//                             <input type="text" placeholder='Enter your Subject' required />
-//                             <textarea placeholder='Enter your Message' rows="5" required></textarea>
-//                             <input type="submit" value="Send Message" />
-//                         </form>
-//                     </div> */}
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// }
-
-
-import React from 'react';
-// import { AiFillGithub } from "react-icons/ai";
+import React, { useState } from 'react';
+import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
-import { contactDetails } from '../Details';
-import '../Style/Contact.css';
+import '../Style/Contact.css'
 
 export default function Contact() {
-    const { email, phone } = contactDetails;
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    });
+
+    const [submitted, setSubmitted] = useState(false);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (formData.name && formData.email && formData.message) {
+            setSubmitted(true);
+            setFormData({ name: '', email: '', message: '' });
+            setTimeout(() => setSubmitted(false), 3000);
+        }
+    };
 
     return (
-        <div>
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-12">
-                        <h2 className="mt-5 text-center">Contact Me</h2>
-                        <p className="fs-5 mt-3 text-center">Let's Work Together</p>
-                       
+        <div className="contact-container">
+            <div className="container mt-5">
+                <div className="contact-header">
+                    <h1 className="contact-title">
+                        Get in <span className="purple">Touch</span>
+                    </h1>
+                    <p className="contact-subtitle">
+                        Feel free to reach out. I'm always open to discussing new projects, creative ideas, or opportunities.
+                    </p>
+                </div>
 
-                        <div className="text-center">
-                            <h3
-                                className="text-center text-3xl md:text-4xl lg:text-6xl text-gradient font-semibold md:font-bold pt-5 md:pt-10 md:pb-6"
-                                style={{ color: "white" }}
-                            >
-                                Email: <a href={`mailto:${email}`} style={{ color: "white" }}>{email}</a>
-                            </h3>
-                            <span className="text-center text-content text-xl font-light block">or</span>
-                            <h3
-                                className="text-center text-3xl md:text-4xl lg:text-6xl text-gradient font-semibold md:font-bold pt-2 md:py-6"
-                                style={{ color: "white" }}
-                            >
-                                Contact: <a href={`tel:${phone}`} style={{ color: "white" }}>{phone}</a>
-                            </h3>
+                <div className="row mt-5">
+                    <div className="col-md-6 contact-info">
+                        <div className="contact-box">
+                            <h3 className="contact-section-title">Contact Information</h3>
+                            
+                            <div className="contact-item">
+                                <h5>Email</h5>
+                                <a href="mailto:maulik@example.com" className="contact-link">
+                                    maulik.vaghela@example.com
+                                </a>
+                            </div>
+
+                            <div className="contact-item">
+                                <h5>Phone</h5>
+                                <a href="tel:+919876543210" className="contact-link">
+                                    +91 98765 43210
+                                </a>
+                            </div>
+
+                            <div className="contact-item">
+                                <h5>Location</h5>
+                                <p className="contact-text">Ahmedabad, India</p>
+                            </div>
+
+                            <div className="social-section">
+                                <h5>Connect With Me</h5>
+                                <ul className="home-about-social-links">
+                                    <li className="social-icons">
+                                        <a href="https://github.com/hokage-maulik" target="_blank" rel="noreferrer" className="social-link">
+                                            <AiFillGithub size={35} />
+                                        </a>
+                                    </li>
+                                    <li className="social-icons">
+                                        <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="social-link">
+                                            <FaLinkedinIn size={35} />
+                                        </a>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
                         </div>
+                    </div>
 
-                        <ul className="home-about-social-links text-center">
-                            {/* <li className="social-icons mx-3">
-                                <a href="https://github.com/hokage-maulik" target="_blank" rel="noreferrer" className="icon-colour home-social-icons text-white">
-                                    <AiFillGithub size={40} />
-                                </a>
-                            </li> */}
-                            <li className="social-icons mx-3">
-                                <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank" rel="noreferrer" className="icon-colour home-social-icons text-white">
-                                    <FaLinkedinIn size={40} />
-                                </a>
-                            </li>
-                            {/* <li className="social-icons mx-3">
-                                <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" className="icon-colour home-social-icons text-white">
-                                    <AiFillInstagram size={40} />
-                                </a>
-                            </li> */}
-                        </ul>
+                    <div className="col-md-6">
+                        <form onSubmit={handleSubmit} className="contact-form">
+                            <div className="form-group">
+                                <label htmlFor="name">Name *</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    placeholder="Your Name"
+                                    required
+                                />
+                            </div>
+
+                            <div className="form-group">
+                                <label htmlFor="email">Email *</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    placeholder="Your Email"
+                                    required
+                                />
+                            </div>
+
+                            <div className="form-group">
+                                <label htmlFor="message">Message *</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="5"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    placeholder="Your Message"
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <button type="submit" className="submit-btn">
+                                Send Message
+                            </button>
+                            
+                            {submitted && (
+                                <div className="success-message">
+                                    ✓ Message sent successfully! I'll get back to you soon.
+                                </div>
+                            )}
+                        </form>
                     </div>
                 </div>
             </div>
